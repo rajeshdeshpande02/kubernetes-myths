@@ -12,11 +12,13 @@
         <meta name="author" content="Rajesh Deshpande">
       
       
+        <link rel="canonical" href="https://kubernetesmyths.com/workload_myths/Myth3_Deployment_Supports_All_Pod_Restart_Policies/">
       
-        <link rel="prev" href="../../architecture_myths/myth4/">
+      
+        <link rel="prev" href="../Myth2_DaemonSet_always_schedule_pods_on_all_nodes/">
       
       
-        <link rel="next" href="../../workload_myths/overview/">
+        <link rel="next" href="../Myth4_Deployments_Automatically_Roll_Back_on_Failure/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +26,7 @@
     
     
       
-        <title>Overview - Kubernetes Myths</title>
+        <title>Myth 3:Deployment Supports All Pod Restart Policies - Kubernetes Myths</title>
       
     
     
@@ -66,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#work-in-progress" class="md-skip">
+        <a href="#myth-3-deployment-supports-all-pod-restart-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Myth 3:Deployment Supports All Pod Restart Policies
             
           </span>
         </div>
@@ -210,13 +212,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-tabs__link">
           
   
   
@@ -232,11 +232,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../workload_myths/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Myth1_Rolling_Updates_Are_Only_Supported_by_Deployments/" class="md-tabs__link">
           
   
   
@@ -256,27 +258,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../pod_myths/overview/" class="md-tabs__link">
-          
-  
-  
-  Pod Myths
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../general_myths/overview/" class="md-tabs__link">
+        <a href="../../general_myths/Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-tabs__link">
           
   
   
@@ -510,6 +492,148 @@
       
   
   
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Networking Myths
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Networking Myths
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 1:kube-proxy assign IP address to Pods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking_myths/Myth2_ClusterIP_Service_is_Only_for_Internal_Traffic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 2:ClusterIP Service is Only for Internal Traffic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking_myths/Myth3_ClusterIP_Services_Always_Use_Round-Robin_Load_Balancing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking_myths/Myth4_kubectl_port-forward_svc_sends_traffic_to_a_service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 4:'kubectl port-forward svc' sends traffic to a service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -531,15 +655,15 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
-    Networking Myths
+    Workload Myths
     
   </span>
   
@@ -547,12 +671,58 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Networking Myths
+            Workload Myths
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myth1_Rolling_Updates_Are_Only_Supported_by_Deployments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 1:Rolling Updates Are Only Supported by Deployments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myth2_DaemonSet_always_schedule_pods_on_all_nodes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 2:DaemonSet always schedule pods on all nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -570,72 +740,90 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Myth 3:Deployment Supports All Pod Restart Policies
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    Myth 3:Deployment Supports All Pod Restart Policies
     
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-myth-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Myth Exists?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Reality:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment &amp; Validate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Workload Myths
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Workload Myths
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -644,12 +832,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workload_myths/overview/" class="md-nav__link">
+      <a href="../Myth4_Deployments_Automatically_Roll_Back_on_Failure/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    Myth 4:Deployments Automatically Roll Back on Failure
     
   </span>
   
@@ -695,7 +883,7 @@
   
   
   <span class="md-ellipsis">
-    Pod Myths
+    General Myths
     
   </span>
   
@@ -705,79 +893,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            Pod Myths
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pod_myths/overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    General Myths
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             General Myths
           </label>
@@ -790,12 +905,58 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general_myths/overview/" class="md-nav__link">
+      <a href="../../general_myths/Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overview
+    Myth 1:Kubernetes Namespaces Provide Complete Isolation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general_myths/Myth2_Complete_application_can_be_rolled_back_in_Kubernetes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 2:Complete application can be rolled back in Kubernetes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general_myths/Myth3_Kubernetes_automatically_roll_back_failed_deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 3:Kubernetes automatically roll back failed deployment
     
   </span>
   
@@ -851,7 +1012,54 @@
 
 
 
-<h1 id="work-in-progress">Work in progress</h1>
+<h1 id="myth-3-deployment-supports-all-pod-restart-policies">Myth 3: Deployment Supports All Pod Restart Policies</h1>
+<p>Can You Use Any Restart Policy in a Deployment? 
+Many believe that Deployments can be used with any Kubernetes Pod restart policy. The assumption is that you can define <code>Always</code>, <code>OnFailure</code>, or <code>Never</code> as the restartPolicy within a Deployment’s Pod spec.But that's not true.</p>
+<h3 id="why-this-myth-exists">Why This Myth Exists?</h3>
+<ol>
+<li>Pods support all three restart policies (<code>Always</code>, <code>OnFailure</code>, <code>Never</code>), leading to the assumption that Deployments do as well.</li>
+<li>Users often assume Pod behavior is the same inside different controllers like Deployments, DaemonSets, or Jobs.</li>
+<li>The Kubernetes API allows specifying other restart policies in Pod definitions, but Deployments override them!</li>
+</ol>
+<h3 id="the-reality">The Reality:</h3>
+<p>Deployment = <code>restartPolicy: Always</code> Only!
+In Kubernetes, Deployments are designed to manage long-running applications. That means:
+- If a Pod fails, Kubernetes restarts it.
+- If a node crashes, a new Pod is scheduled on another node.
+- Any restart policy other than Always is rejected!</p>
+<h3 id="experiment-validate">Experiment &amp; Validate</h3>
+<p>Let’s try using <code>restartPolicy: OnFailure</code> inside a Deployment and see what happens:</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      restartPolicy: OnFailure
+      containers:
+      - name: test-container
+        image: busybox
+        command: [&quot;sh&quot;, &quot;-c&quot;, &quot;echo Hello &amp;&amp; exit 1&quot;]
+</code></pre>
+<p>What Happens?
+Deployment rejects <code>OnFailure</code> and throw an error!</p>
+<pre><code>The Deployment &quot;my-deployment&quot; is invalid: spec.template.spec.restartPolicy: Unsupported value: &quot;OnFailure&quot;: supported values: &quot;Always&quot;
+</code></pre>
+<p>Kubernetes rejects the Deployment, as it does not allow restart policies other than <code>Always</code>.</p>
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ul>
+<li><strong>Deployments only support</strong> <code>restartPolicy: Always</code>—other policies are rejected.</li>
+<li><strong>Use Jobs or CronJobs for</strong> <code>OnFailure</code> or <code>Never</code> <strong>restart behavior.</strong></li>
+<li><strong>Understanding controller-specific behavior prevents misconfigurations.</strong></li>
+</ul>
 
 
 

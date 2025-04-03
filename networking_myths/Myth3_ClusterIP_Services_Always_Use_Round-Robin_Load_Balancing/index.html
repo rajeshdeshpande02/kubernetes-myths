@@ -12,13 +12,13 @@
         <meta name="author" content="Rajesh Deshpande">
       
       
-        <link rel="canonical" href="https://kubernetesmyths.com/architecture_myths/myth4/">
+        <link rel="canonical" href="https://kubernetesmyths.com/networking_myths/Myth3_ClusterIP_Services_Always_Use_Round-Robin_Load_Balancing/">
       
       
-        <link rel="prev" href="../myth3/">
+        <link rel="prev" href="../Myth2_ClusterIP_Service_is_Only_for_Internal_Traffic/">
       
       
-        <link rel="next" href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/">
+        <link rel="next" href="../Myth4_kubectl_port-forward_svc_sends_traffic_to_a_service/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Myth 4:Control Plane Nodes Don’t Need a Container Runtime - Kubernetes Myths</title>
+        <title>Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing - Kubernetes Myths</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#myth-4-control-plane-nodes-dont-need-a-container-runtime" class="md-skip">
+        <a href="#myth-3-clusterip-services-always-use-round-robin-load-balancing" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Myth 4:Control Plane Nodes Don’t Need a Container Runtime
+              Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing
             
           </span>
         </div>
@@ -192,13 +192,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../myth1/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../architecture_myths/myth1/" class="md-tabs__link">
           
   
   
@@ -214,11 +212,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-tabs__link">
           
   
   
@@ -350,31 +350,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -387,7 +382,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Architecture Myths
@@ -401,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth1/" class="md-nav__link">
+      <a href="../../architecture_myths/myth1/" class="md-nav__link">
         
   
   
@@ -424,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth2/" class="md-nav__link">
+      <a href="../../architecture_myths/myth2/" class="md-nav__link">
         
   
   
@@ -447,12 +442,136 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth3/" class="md-nav__link">
+      <a href="../../architecture_myths/myth3/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture_myths/myth4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 4:Control Plane Nodes Don’t Need a Container Runtime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Networking Myths
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Networking Myths
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 1:kube-proxy assign IP address to Pods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myth2_ClusterIP_Service_is_Only_for_Internal_Traffic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 2:ClusterIP Service is Only for Internal Traffic
     
   </span>
   
@@ -484,7 +603,7 @@
   
   
   <span class="md-ellipsis">
-    Myth 4:Control Plane Nodes Don’t Need a Container Runtime
+    Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing
     
   </span>
   
@@ -497,7 +616,7 @@
   
   
   <span class="md-ellipsis">
-    Myth 4:Control Plane Nodes Don’t Need a Container Runtime
+    Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing
     
   </span>
   
@@ -520,9 +639,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-does-this-myth-exist" class="md-nav__link">
+  <a href="#why-this-myth-exists" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Does This Myth Exist?
+      Why This Myth Exists?
     </span>
   </a>
   
@@ -546,15 +665,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -564,56 +674,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Networking Myths
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Networking Myths
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -621,76 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Myth 1:kube-proxy assign IP address to Pods
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../networking_myths/Myth2_ClusterIP_Service_is_Only_for_Internal_Traffic/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Myth 2:ClusterIP Service is Only for Internal Traffic
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../networking_myths/Myth3_ClusterIP_Services_Always_Use_Round-Robin_Load_Balancing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Myth 3:ClusterIP Services Always Use Round-Robin Load Balancing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../networking_myths/Myth4_kubectl_port-forward_svc_sends_traffic_to_a_service/" class="md-nav__link">
+      <a href="../Myth4_kubectl_port-forward_svc_sends_traffic_to_a_service/" class="md-nav__link">
         
   
   
@@ -1012,50 +1003,66 @@
 
 
 
-<h1 id="myth-4-control-plane-nodes-dont-need-a-container-runtime">Myth 4: Control Plane Nodes Don’t Need a Container Runtime</h1>
-<p>You set up your control plane node, confident that everything is configured correctly. Next, you run <code>kubeadm init</code>, expecting a smooth setup—but it fails instantly!</p>
-<p>The error? <code>no container runtime detected.</code></p>
-<p>That’s strange. Isn’t the container runtime needed only on worker nodes to run application workloads? You double-check your configuration, thinking you might have missed a step. But the error persists.</p>
-<p>What’s going on here? Why is Kubernetes complaining about a missing CRI on the control plane?</p>
-<h3 id="why-does-this-myth-exist">Why Does This Myth Exist?</h3>
+<h1 id="myth-3-clusterip-services-always-use-round-robin-load-balancing">Myth 3: ClusterIP Services Always Use Round-Robin Load Balancing</h1>
+<p><strong>Have you ever assumed that your pods are getting equal traffic?</strong> Many engineers believe Kubernetes distributes traffic evenly across pods in a strict round-robin manner. But if you actually monitor request distribution, you’ll notice something surprising—some pods receive more traffic than others. Is Kubernetes failing at load balancing? Not really. It turns out that the default behavior isn't what most people expect.</p>
+<h3 id="why-this-myth-exists">Why This Myth Exists?</h3>
 <ol>
-<li><strong>Over-Simplified Architecture Explanations</strong> – Many Kubernetes learning resources describe the architecture in a rigid way: Control plane runs API Server, etcd, Scheduler, and Controller Manager, while worker nodes run Kubelet, CRI, and Kube-Proxy. This oversimplification leads to misconceptions.</li>
-<li><strong>Misinterpretation of Control Plane Responsibilities</strong> – Since control plane components are often seen as "management-only," people assume they don’t rely on container runtimes, networking components, or Kubelet.</li>
-<li><strong>Managed Kubernetes Abstraction</strong> – Many managed Kubernetes services abstract away the control plane, making engineers believe that only worker nodes require components like CRI, Kubelet, or CNI.</li>
-<li><strong>Historical Understanding of Kubernetes</strong> – Earlier Kubernetes documentation and tutorials emphasized worker nodes as the place where "real workloads" run, reinforcing the belief that key infrastructure components don’t function similarly on control plane nodes.</li>
+<li>People assume Kubernetes works like traditional load balancers, which often default to round-robin.</li>
+<li>The presence of multiple backend pods creates an expectation of even traffic distribution.</li>
+<li>The internal working of kube-proxy is often overlooked</li>
 </ol>
 <h3 id="the-reality">The Reality</h3>
-<p><strong>CRI is Essential on Control Plane Nodes—But with Exceptions:</strong>
-- When control plane components (like API Server, Controller Manager, and etcd) run as <strong>static pods</strong>, a <strong>Container Runtime Interface (CRI) is required because Kubelet manages them as containers.</strong>
-- However, in some Kubernetes setups (e.g., certain managed services or custom-built clusters), control plane components run as systemd services instead of static pods. In such cases, the control plane can function without a CRI.
-- Despite this exception, <strong>most Kubernetes distributions rely on static pods, making CRI a fundamental requirement for both control plane and worker nodes.</strong>
-- Even if the control plane runs without a CRI, worker nodes still require it to manage application workloads.</p>
+<p>The default iptables-based kube-proxy does not use round-robin. Instead, it relies on random probability-based selection when forwarding traffic to backend pods.</p>
 <h3 id="experiment-validate">Experiment &amp; Validate</h3>
-<p><strong>Step 1: Check if the Control Plane Uses CRI</strong>
-Run:</p>
-<pre><code>kubectl get pods -n kube-system
+<p>Step 1: Create a ClusterIP Service with Multiple Pods
+Apply the following YAML:</p>
+<pre><code>apiVersion: v1
+kind: Service
+metadata:
+  name: test-clusterip
+spec:
+  selector:
+    app: test-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
 </code></pre>
-<p>Expected Output (If CRI is Present):</p>
-<pre><code>NAME                               READY   STATUS    RESTARTS   AGE
-kube-apiserver-control-plane       1/1     Running   0          5m
-etcd-control-plane                 1/1     Running   0          5m
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-app
+  template:
+    metadata:
+      labels:
+        app: test-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 8080
+
 </code></pre>
-<p>If these pods are missing or stuck in <code>ContainerCreating</code>, it likely means CRI is missing.</p>
-<p><strong>Step 2: Verify CRI Connectivity</strong>
-Run:</p>
-<pre><code>crictl ps
+<p>Step 1: Send Requests and Observe the Pattern
+Run multiple requests from a test pod:</p>
+<pre><code>kubectl run test --rm -it --image=busybox -- /bin/sh
 </code></pre>
-<p>Expected Output (If CRI is Missing):</p>
-<pre><code>E0205 10:22:34.123456   1234 runtime.go:300] no runtime configured
+<p>Inside the pod, execute:</p>
+<pre><code>while true; do wget -qO- http://test-clusterip.default.svc.cluster.local; sleep 1; done
 </code></pre>
-<p>Confirming that the control plane needs a CRI just like worker nodes.</p>
+<h1 id="todo-include-kiali-image">TODO - Include Kiali image</h1>
+<p>You'll notice that some pods receive more traffic than others—proving that the selection is random and not round-robin.</p>
 <h3 id="key-takeaways">Key Takeaways</h3>
 <ul>
-<li><strong>CRI is required on all nodes where Kubernetes components run as containers,</strong> including control plane nodes.</li>
-<li><strong>Control plane components (like API Server, etcd, and Controller Manager) run as static pods</strong> in most Kubernetes setups, requiring a container runtime.</li>
-<li><strong>Some Kubernetes distributions run control plane components as systemd services,</strong> in which case CRI is not needed on control plane nodes.</li>
-<li><strong>Without a CRI, kubeadm cannot initialize the cluster,</strong> and critical control plane services won’t start if they rely on containers.</li>
-<li><strong>Understanding CRI’s role helps in troubleshooting missing services and failed cluster initialization issues.</strong></li>
+<li><strong>ClusterIP does not guarantee round-robin load balancing</strong>—default iptables mode uses random selection.</li>
+<li><strong>IPVS mode can enable true round-robin scheduling</strong> in Kubernetes.</li>
+<li><strong>External load balancers</strong> provide more fine-grained control if round-robin is essential.</li>
 </ul>
 
 

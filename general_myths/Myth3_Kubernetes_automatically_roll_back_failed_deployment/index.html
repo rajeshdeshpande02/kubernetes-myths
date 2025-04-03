@@ -12,13 +12,13 @@
         <meta name="author" content="Rajesh Deshpande">
       
       
-        <link rel="canonical" href="https://kubernetesmyths.com/architecture_myths/myth4/">
+        <link rel="canonical" href="https://kubernetesmyths.com/general_myths/Myth3_Kubernetes_automatically_roll_back_failed_deployment/">
       
       
-        <link rel="prev" href="../myth3/">
+        <link rel="prev" href="../Myth2_Complete_application_can_be_rolled_back_in_Kubernetes/">
       
       
-        <link rel="next" href="../../networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/">
+        <link rel="next" href="../../about/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Myth 4:Control Plane Nodes Don’t Need a Container Runtime - Kubernetes Myths</title>
+        <title>Myth 3:Kubernetes automatically roll back failed deployment - Kubernetes Myths</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#myth-4-control-plane-nodes-dont-need-a-container-runtime" class="md-skip">
+        <a href="#myth-3-kubernetes-automatically-roll-back-failed-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Myth 4:Control Plane Nodes Don’t Need a Container Runtime
+              Myth 3:Kubernetes automatically roll back failed deployment
             
           </span>
         </div>
@@ -192,13 +192,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../myth1/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../architecture_myths/myth1/" class="md-tabs__link">
           
   
   
@@ -254,11 +252,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../general_myths/Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-tabs__link">
           
   
   
@@ -350,31 +350,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -387,7 +382,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Architecture Myths
@@ -401,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth1/" class="md-nav__link">
+      <a href="../../architecture_myths/myth1/" class="md-nav__link">
         
   
   
@@ -424,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth2/" class="md-nav__link">
+      <a href="../../architecture_myths/myth2/" class="md-nav__link">
         
   
   
@@ -447,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth3/" class="md-nav__link">
+      <a href="../../architecture_myths/myth3/" class="md-nav__link">
         
   
   
@@ -467,32 +462,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Myth 4:Control Plane Nodes Don’t Need a Container Runtime
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../architecture_myths/myth4/" class="md-nav__link">
         
   
   
@@ -503,62 +476,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-does-this-myth-exist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Does This Myth Exist?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-reality" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Reality
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#experiment-validate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Experiment &amp; Validate
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -859,26 +776,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -891,7 +813,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             General Myths
@@ -905,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general_myths/Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-nav__link">
+      <a href="../Myth1_Kubernetes_Namespaces_Provide_Complete_Isolation/" class="md-nav__link">
         
   
   
@@ -928,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general_myths/Myth2_Complete_application_can_be_rolled_back_in_Kubernetes/" class="md-nav__link">
+      <a href="../Myth2_Complete_application_can_be_rolled_back_in_Kubernetes/" class="md-nav__link">
         
   
   
@@ -948,10 +870,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../general_myths/Myth3_Kubernetes_automatically_roll_back_failed_deployment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Myth 3:Kubernetes automatically roll back failed deployment
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -962,6 +906,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-myth-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Myth Exists?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Reality
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experiment-validate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Experiment &amp; Validate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1012,50 +1012,125 @@
 
 
 
-<h1 id="myth-4-control-plane-nodes-dont-need-a-container-runtime">Myth 4: Control Plane Nodes Don’t Need a Container Runtime</h1>
-<p>You set up your control plane node, confident that everything is configured correctly. Next, you run <code>kubeadm init</code>, expecting a smooth setup—but it fails instantly!</p>
-<p>The error? <code>no container runtime detected.</code></p>
-<p>That’s strange. Isn’t the container runtime needed only on worker nodes to run application workloads? You double-check your configuration, thinking you might have missed a step. But the error persists.</p>
-<p>What’s going on here? Why is Kubernetes complaining about a missing CRI on the control plane?</p>
-<h3 id="why-does-this-myth-exist">Why Does This Myth Exist?</h3>
+<h1 id="myth-3-kubernetes-automatically-roll-back-failed-deployment">Myth 3: Kubernetes automatically roll back failed deployment</h1>
+<p>A team deployed a new version of their application, expecting Kubernetes to roll it back automatically if something went wrong. Unfortunately, the deployment failed, but instead of rolling back, Kubernetes left it in a bad state. The team was surprised—wasn't Kubernetes supposed to handle this automatically?</p>
+<h3 id="why-this-myth-exists">Why This Myth Exists?</h3>
+<p>This misunderstanding comes from:</p>
 <ol>
-<li><strong>Over-Simplified Architecture Explanations</strong> – Many Kubernetes learning resources describe the architecture in a rigid way: Control plane runs API Server, etcd, Scheduler, and Controller Manager, while worker nodes run Kubelet, CRI, and Kube-Proxy. This oversimplification leads to misconceptions.</li>
-<li><strong>Misinterpretation of Control Plane Responsibilities</strong> – Since control plane components are often seen as "management-only," people assume they don’t rely on container runtimes, networking components, or Kubelet.</li>
-<li><strong>Managed Kubernetes Abstraction</strong> – Many managed Kubernetes services abstract away the control plane, making engineers believe that only worker nodes require components like CRI, Kubelet, or CNI.</li>
-<li><strong>Historical Understanding of Kubernetes</strong> – Earlier Kubernetes documentation and tutorials emphasized worker nodes as the place where "real workloads" run, reinforcing the belief that key infrastructure components don’t function similarly on control plane nodes.</li>
+<li>
+<p><strong>Expectation from Traditional Systems</strong> – Some deployment tools provide automatic rollback mechanisms, leading users to assume Kubernetes does the same.</p>
+</li>
+<li>
+<p><strong>Confusion with Health Checks</strong> – Kubernetes can stop bad deployments using readiness and liveness probes, but stopping an update is different from rolling back.</p>
+</li>
+<li>
+<p><strong>Rollback Feature Misinterpretation</strong> – Since <code>kubectl rollout undo</code> exists, people assume Kubernetes triggers it automatically.</p>
+</li>
+<li>
+<p><strong>Expectation from CI/CD Pipelines</strong> – Some CI/CD tools like ArgoCD and Spinnaker offer auto-rollbacks, making users think Kubernetes itself provides this feature.</p>
+</li>
+<li>
+<p><strong>Misunderstanding</strong> <code>progressDeadlineSeconds</code> – Many believe setting <code>progressDeadlineSeconds</code> triggers an automatic rollback, but it only marks the deployment as failed.</p>
+</li>
 </ol>
 <h3 id="the-reality">The Reality</h3>
-<p><strong>CRI is Essential on Control Plane Nodes—But with Exceptions:</strong>
-- When control plane components (like API Server, Controller Manager, and etcd) run as <strong>static pods</strong>, a <strong>Container Runtime Interface (CRI) is required because Kubelet manages them as containers.</strong>
-- However, in some Kubernetes setups (e.g., certain managed services or custom-built clusters), control plane components run as systemd services instead of static pods. In such cases, the control plane can function without a CRI.
-- Despite this exception, <strong>most Kubernetes distributions rely on static pods, making CRI a fundamental requirement for both control plane and worker nodes.</strong>
-- Even if the control plane runs without a CRI, worker nodes still require it to manage application workloads.</p>
+<p>Kubernetes does not automatically roll back a failed Deployment. While it detects failures, it requires manual intervention to revert to a previous version.Here’s what actually happens:</p>
+<ul>
+<li>
+<p>If a Deployment update fails, Kubernetes pauses further updates but does not roll back.</p>
+</li>
+<li>
+<p>You must manually trigger a rollback using <code>kubectl rollout undo deployment &lt;name&gt;</code>.</p>
+</li>
+<li>
+<p>Kubernetes tracks revisions, but rollbacks only work for Deployments—they do not revert ConfigMaps, Secrets, or Persistent Volumes.</p>
+</li>
+<li>
+<p><code>progressDeadlineSeconds</code> plays a crucial role – If a rollout does not complete within the configured <code>progressDeadlineSeconds</code>, the Deployment is marked as failed, but Kubernetes does not roll it back automatically. Instead, the rollout gets paused, requiring manual intervention.</p>
+</li>
+</ul>
 <h3 id="experiment-validate">Experiment &amp; Validate</h3>
-<p><strong>Step 1: Check if the Control Plane Uses CRI</strong>
-Run:</p>
-<pre><code>kubectl get pods -n kube-system
+<p>Step 1: Create a Working Deployment</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  progressDeadlineSeconds: 30
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
 </code></pre>
-<p>Expected Output (If CRI is Present):</p>
-<pre><code>NAME                               READY   STATUS    RESTARTS   AGE
-kube-apiserver-control-plane       1/1     Running   0          5m
-etcd-control-plane                 1/1     Running   0          5m
+<p>Apply the Deployment:</p>
+<pre><code>kubectl apply -f nginx-deployment.yaml
+kubectl rollout status deployment/nginx-deployment
 </code></pre>
-<p>If these pods are missing or stuck in <code>ContainerCreating</code>, it likely means CRI is missing.</p>
-<p><strong>Step 2: Verify CRI Connectivity</strong>
-Run:</p>
-<pre><code>crictl ps
+<p>This should show a successful rollout.</p>
+<p>Step 2: Trigger a Failed Deployment
+Now, let's break the deployment by using an invalid container image.</p>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+  progressDeadlineSeconds: 30
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:doesnotexist  # Invalid image
+          ports:
+            - containerPort: 80
 </code></pre>
-<p>Expected Output (If CRI is Missing):</p>
-<pre><code>E0205 10:22:34.123456   1234 runtime.go:300] no runtime configured
+<p>Apply the broken Deployment:</p>
+<pre><code>kubectl apply -f nginx-deployment.yaml
 </code></pre>
-<p>Confirming that the control plane needs a CRI just like worker nodes.</p>
+<p>Check the rollout status:</p>
+<pre><code>kubectl rollout status deployment/nginx-deployment --timeout=60s
+kubectl rollout status deployment/nginx-deployment --timeout=60s
+</code></pre>
+<p>After <code>progressDeadlineSeconds</code> (30 seconds in this case), Kubernetes will mark the Deployment as failed, but it won’t roll back automatically.</p>
+<p>Step 3: Verify That Kubernetes Does Not Roll Back
+Check the rollout history:</p>
+<pre><code>kubectl rollout history deployment/nginx-deployment
+</code></pre>
+<p>You'll see that Kubernetes has not reverted to the previous working version.</p>
+<p>Check the deployment status:</p>
+<pre><code>kubectl get deployment nginx-deployment -o jsonpath='{.status.conditions}'
+</code></pre>
+<p>The output will show a ProgressDeadlineExceeded condition but no rollback.</p>
 <h3 id="key-takeaways">Key Takeaways</h3>
 <ul>
-<li><strong>CRI is required on all nodes where Kubernetes components run as containers,</strong> including control plane nodes.</li>
-<li><strong>Control plane components (like API Server, etcd, and Controller Manager) run as static pods</strong> in most Kubernetes setups, requiring a container runtime.</li>
-<li><strong>Some Kubernetes distributions run control plane components as systemd services,</strong> in which case CRI is not needed on control plane nodes.</li>
-<li><strong>Without a CRI, kubeadm cannot initialize the cluster,</strong> and critical control plane services won’t start if they rely on containers.</li>
-<li><strong>Understanding CRI’s role helps in troubleshooting missing services and failed cluster initialization issues.</strong></li>
+<li>Kubernetes does not automatically roll back a failed Deployment.</li>
+<li>You must manually trigger a rollback if needed.</li>
+<li>progressDeadlineSeconds only marks a deployment as failed but does not roll it back.</li>
+<li>CI/CD tools can be configured to handle rollback logic.</li>
 </ul>
 
 

@@ -41,6 +41,10 @@
          <lastmod>2025-04-06</lastmod>
     </url>
     <url>
+         <loc>https://kubernetesmyths.com/general_myths/overview/</loc>
+         <lastmod>2025-04-06</lastmod>
+    </url>
+    <url>
          <loc>https://kubernetesmyths.com/networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods/</loc>
          <lastmod>2025-04-06</lastmod>
     </url>
@@ -54,6 +58,10 @@
     </url>
     <url>
          <loc>https://kubernetesmyths.com/networking_myths/Myth4_kubectl_port-forward_svc_sends_traffic_to_a_service/</loc>
+         <lastmod>2025-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://kubernetesmyths.com/networking_myths/overview/</loc>
          <lastmod>2025-04-06</lastmod>
     </url>
     <url>
@@ -74,6 +82,10 @@
     </url>
     <url>
          <loc>https://kubernetesmyths.com/workload_myths/Myth4_Deployments_Automatically_Roll_Back_on_Failure/</loc>
+         <lastmod>2025-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://kubernetesmyths.com/workload_myths/overview/</loc>
          <lastmod>2025-04-06</lastmod>
     </url>
 </urlset>

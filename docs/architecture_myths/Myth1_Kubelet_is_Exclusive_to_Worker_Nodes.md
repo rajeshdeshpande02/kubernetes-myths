@@ -13,7 +13,9 @@ You start to wonder—if control plane nodes aren’t supposed to run applicatio
 
 ### The Reality
 Kubelet runs on all nodes in a typical Kubernetes cluster, including control plane nodes. However, its role differs:
+
 - **On worker nodes:** Kubelet registers the node and manages pod execution.
+
 - **On control plane nodes (when using static pods):** Kubelet ensures control plane components like the API server, scheduler, and controller manager run correctly.
 
 Exception: Some Kubernetes distributions (e.g., certain air-gapped or enterprise setups) run control plane components as systemd services instead of static pods. In such cases, Kubelet may not be needed on control plane nodes. **However, this is uncommon in most Kubernetes distributions.**

@@ -13,8 +13,11 @@ So, What might be wrong?
 
 ### The Reality:
 A CNI (Container Network Interface) plugin is essential for Production Grade Kubernetes networking—without it, core networking functionalities break.
+
 - **Pod-to-pod communication depends on CNI** – Kubernetes does not manage networking by itself; it relies on a CNI to assign IP addresses and enable connectivity between pods, especially across nodes.
+
 - **Multi-node clusters require a CNI** – Without a CNI, pods on different nodes cannot communicate because Kubernetes does not provide an internal networking layer.
+
 - **Critical Kubernetes features won’t work** – Services, network policies, and pod IP management all rely on a CNI. Without it, pods may remain stuck in the `ContainerCreating` state, and basic networking between workloads will fail.
 
 Even though local setups like k3s and Minikube may seem to work without a visible CNI,this is because they embed lightweight networking solutions. In a standard Kubernetes cluster, a CNI is mandatory for networking to function.

@@ -15,9 +15,13 @@ What’s going on here? Why is Kubernetes complaining about a missing CRI on the
 
 ### The Reality
 **CRI is Essential on Control Plane Nodes—But with Exceptions:**
+
 - When control plane components (like API Server, Controller Manager, and etcd) run as **static pods**, a **Container Runtime Interface (CRI) is required because Kubelet manages them as containers.**
+
 - However, in some Kubernetes setups (e.g., certain managed services or custom-built clusters), control plane components run as systemd services instead of static pods. In such cases, the control plane can function without a CRI.
+
 - Despite this exception, **most Kubernetes distributions rely on static pods, making CRI a fundamental requirement for both control plane and worker nodes.**
+
 - Even if the control plane runs without a CRI, worker nodes still require it to manage application workloads.
 
 ### Experiment & Validate

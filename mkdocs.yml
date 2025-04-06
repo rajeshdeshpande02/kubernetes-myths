@@ -11,6 +11,7 @@ extra:
 
 theme:
   name: material
+  #logo: assets/images/logo.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -21,10 +22,12 @@ theme:
 nav:
   - Home: index.md
   - Architecture Myths: 
-      - Myth 1:Kubelet is Exclusive to Worker Nodes: architecture_myths/myth1.md
-      - Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy: architecture_myths/myth2.md
-      - Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin: architecture_myths/myth3.md
-      - Myth 4:Control Plane Nodes Don’t Need a Container Runtime: architecture_myths/myth4.md
+      - Overview: architecture_myths/overview.md
+      - Myth 1:Kubelet is Exclusive to Worker Nodes: architecture_myths/Myth1_Kubelet_is_Exclusive_to_Worker_Nodes.md
+      - Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy: architecture_myths/Myth2_Kubernetes_Clusters_Can't_Function_Without_Kube-Proxy.md
+      - Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin: architecture_myths/Myth3_Kubernetes_Networking_Works_Fine_Without_a_CNI_Plugin.md
+      - Myth 4:Control Plane Nodes Don’t Need a Container Runtime: architecture_myths/Myth4_Control_Plane_Nodes_Don’t_Need_a_Container_Runtime.md
+ 
   - Networking Myths:
       - Myth 1:kube-proxy assign IP address to Pods: networking_myths/Myth1_kube-proxy_assign_IP_address_to_Pods.md
       - Myth 2:ClusterIP Service is Only for Internal Traffic: networking_myths/Myth2_ClusterIP_Service_is_Only_for_Internal_Traffic.md
@@ -42,4 +45,4 @@ nav:
       - Myth 2:Complete application can be rolled back in Kubernetes: general_myths/Myth2_Complete_application_can_be_rolled_back_in_Kubernetes.md
       - Myth 3:Kubernetes automatically roll back failed deployment: general_myths/Myth3_Kubernetes_automatically_roll_back_failed_deployment.md
       
-  - About: about.md
+  #- About: about.md

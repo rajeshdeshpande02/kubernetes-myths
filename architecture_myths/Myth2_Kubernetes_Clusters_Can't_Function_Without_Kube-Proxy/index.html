@@ -12,13 +12,13 @@
         <meta name="author" content="Rajesh Deshpande">
       
       
-        <link rel="canonical" href="https://kubernetesmyths.com/architecture_myths/myth3/">
+        <link rel="canonical" href="https://kubernetesmyths.com/architecture_myths/Myth2_Kubernetes_Clusters_Can%27t_Function_Without_Kube-Proxy/">
       
       
-        <link rel="prev" href="../myth2/">
+        <link rel="prev" href="../Myth1_Kubelet_is_Exclusive_to_Worker_Nodes/">
       
       
-        <link rel="next" href="../myth4/">
+        <link rel="next" href="../Myth3_Kubernetes_Networking_Works_Fine_Without_a_CNI_Plugin/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin - Kubernetes Myths</title>
+        <title>Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy - Kubernetes Myths</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#myth-3-kubernetes-networking-works-fine-without-a-cni-plugin" class="md-skip">
+        <a href="#myth-2-kubernetes-clusters-cant-function-without-kube-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin
+              Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy
             
           </span>
         </div>
@@ -198,7 +198,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../myth1/" class="md-tabs__link">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -267,25 +267,6 @@
         </a>
       </li>
     
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../about/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  About
-
-      </a>
-    </li>
   
 
       
@@ -401,12 +382,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth1/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Myth 1:Kubelet is Exclusive to Worker Nodes
+    Overview
     
   </span>
   
@@ -424,12 +405,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth2/" class="md-nav__link">
+      <a href="../Myth1_Kubelet_is_Exclusive_to_Worker_Nodes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy
+    Myth 1:Kubelet is Exclusive to Worker Nodes
     
   </span>
   
@@ -461,7 +442,7 @@
   
   
   <span class="md-ellipsis">
-    Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin
+    Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy
     
   </span>
   
@@ -474,7 +455,7 @@
   
   
   <span class="md-ellipsis">
-    Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin
+    Myth 2:Kubernetes Clusters Can't Function Without Kube-Proxy
     
   </span>
   
@@ -506,9 +487,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-reality" class="md-nav__link">
+  <a href="#reality" class="md-nav__link">
     <span class="md-ellipsis">
-      The Reality:
+      Reality
     </span>
   </a>
   
@@ -548,7 +529,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../myth4/" class="md-nav__link">
+      <a href="../Myth3_Kubernetes_Networking_Works_Fine_Without_a_CNI_Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Myth 3:Kubernetes Networking Works Fine Without a CNI Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Myth4_Control_Plane_Nodes_Don%E2%80%99t_Need_a_Container_Runtime/" class="md-nav__link">
         
   
   
@@ -974,28 +978,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    About
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1012,52 +994,42 @@
 
 
 
-<h1 id="myth-3-kubernetes-networking-works-fine-without-a-cni-plugin">Myth 3: Kubernetes Networking Works Fine Without a CNI Plugin</h1>
-<p>You set up a Production Kubernetes cluster, deploy some pods, and… nothing. They can't talk to each other, You search Stack Overflow, try restarting pods, but nothing works, Finally, you realize networking is broken, and some pods are stuck in "ContainerCreating" state. You check the logs and see:</p>
-<pre><code class="language-sh">NetworkPluginNotReady: CNI plugin not initialized
-</code></pre>
-<p>So, What might be wrong? </p>
+<h1 id="myth-2-kubernetes-clusters-cant-function-without-kube-proxy">Myth 2: Kubernetes Clusters Can't Function Without Kube-Proxy</h1>
+<p>You deploy a Kubernetes cluster and start checking the usual system components. API server? Running. Controller manager? Running. Kube-Proxy? Wait… it's missing! You double-check the namespace, logs, and even the deployment—nothing. But surprisingly, your pods and services are still communicating just fine. How is this possible? Isn't Kube-Proxy essential for cluster networking?</p>
 <h3 id="why-this-myth-exists">Why This Myth Exists?</h3>
 <ol>
-<li><strong>Local environments create an illusion</strong> – Some Kubernetes distributions (like Minikube, k3s, and kind) include built-in networking, making it seem like a CNI is optional. Since these setups "just work" out of the box, users may not realize a CNI is missing in a standard cluster.</li>
-<li><strong>Kubernetes does not bundle a default CNI</strong> – Unlike other components (like the scheduler or API server), Kubernetes does not ship with a preinstalled CNI. This can mislead users into thinking networking is an add-on rather than a fundamental requirement.</li>
-<li><strong>Single-node clusters work without a CNI</strong> – On a single-node cluster, all pods can share the host’s networking stack. This makes basic pod communication seem functional, masking the fact that a proper CNI is required for multi-node networking, pod IP assignment, and policies.</li>
+<li><strong>Kube-Proxy is enabled by default</strong> in most Kubernetes distributions, making it appear mandatory.</li>
+<li><strong>Traditional Kubernetes networking relies on iptables or IPVS,</strong> which are managed by Kube-Proxy, reinforcing its perceived necessity.</li>
+<li><strong>Many engineers are unaware of eBPF-based networking solutions,</strong> such as Cilium, which can entirely replace Kube-Proxy while improving performance and scalability.</li>
 </ol>
-<h3 id="the-reality">The Reality:</h3>
-<p>A CNI (Container Network Interface) plugin is essential for Production Grade Kubernetes networking—without it, core networking functionalities break.
-- <strong>Pod-to-pod communication depends on CNI</strong> – Kubernetes does not manage networking by itself; it relies on a CNI to assign IP addresses and enable connectivity between pods, especially across nodes.
-- <strong>Multi-node clusters require a CNI</strong> – Without a CNI, pods on different nodes cannot communicate because Kubernetes does not provide an internal networking layer.
-- <strong>Critical Kubernetes features won’t work</strong> – Services, network policies, and pod IP management all rely on a CNI. Without it, pods may remain stuck in the <code>ContainerCreating</code> state, and basic networking between workloads will fail.</p>
-<p>Even though local setups like k3s and Minikube may seem to work without a visible CNI,this is because they embed lightweight networking solutions. In a standard Kubernetes cluster, a CNI is mandatory for networking to function.</p>
+<h3 id="reality">Reality</h3>
+<ul>
+<li>Kube-Proxy is a <strong>default networking component</strong> in Kubernetes, but it is not mandatory for cluster functionality. Kubernetes networking is designed to support multiple implementations, and modern solutions can replace Kube-Proxy entirely.</li>
+<li>Newer networking models, such as <strong>eBPF-based CNIs (e.g., Cilium, Calico eBPF, and Katran),</strong> bypass the need for Kube-Proxy by directly handling packet processing within the kernel. These solutions not only eliminate the dependency on iptables/IPVS but also improve performance, scalability, and security by reducing latency and enabling fine-grained traffic control.</li>
+<li><strong>Many high-performance Kubernetes clusters</strong>—especially those optimized for large-scale workloads—choose to disable Kube-Proxy in favor of these more efficient networking alternatives.</li>
+</ul>
 <h3 id="experiment-validate">Experiment &amp; Validate</h3>
-<p><strong>Step 1: Check Pod Status Without a CNI</strong>
-If a Kubernetes cluster is deployed without a CNI, pods will be stuck in the ContainerCreating state. Run:</p>
-<pre><code>kubectl get pods -A
+<p><strong>Step 1: Disable Kube-Proxy</strong>
+Scale down Kube-Proxy to remove it from the cluster:</p>
+<pre><code>kubectl -n kube-system scale deployment kube-proxy --replicas=0
 </code></pre>
-<p>Example output:</p>
-<pre><code class="language-sh">NAMESPACE     NAME                          READY   STATUS              RESTARTS   AGE
-kube-system   coredns-78fcd69978-2v7        0/1     ContainerCreating   0          10m
-kube-system   coredns-78fcd69978-s7jxp      0/1     ContainerCreating   0          10m
-
+<p><strong>Step 2: Install Cilium Without Kube-Proxy</strong>
+Use Cilium as a replacement, enabling eBPF-based networking:</p>
+<pre><code>helm install cilium cilium/cilium --set kubeProxyReplacement=strict
 </code></pre>
-<p><strong>Step 2: Check Node Conditions</strong>
-Inspect the node description to verify networking errors:</p>
-<pre><code class="language-sh">kubectl describe node &lt;node-name&gt;
+<p><strong>Step 3: Deploy a Service and Test Connectivity</strong>
+Create an Nginx pod and expose it as a service:</p>
+<pre><code>kubectl run nginx --image=nginx --port=80 --expose
 </code></pre>
-<p>You'll likely see an error like:</p>
-<pre><code class="language-vbnet">NetworkPluginNotReady: network plugin is not ready: cni plugin not initialized
+<p>Now, check if the service works without Kube-Proxy:</p>
+<pre><code>kubectl run test-pod --image=busybox --restart=Never --rm -it -- wget -qO- nginx
 </code></pre>
-<p><strong>Step 3: Verify Missing Network Interfaces</strong>
-Kubernetes assigns pod IPs through the CNI. If no CNI is installed, pods won’t receive IPs:</p>
-<pre><code>kubectl get pods -o wide
-</code></pre>
-<p>If the IP column is empty or missing, it confirms that pod networking is broken due to a missing CNI.</p>
+<p>If successful, you’ll see the Nginx welcome page, proving that Kubernetes networking works without Kube-Proxy.</p>
 <h3 id="key-takeaways">Key Takeaways</h3>
 <ul>
-<li>Kubernetes delegates networking to a CNI, making it a required component.</li>
-<li>Without a CNI, pods won’t get IPs, and multi-node clusters won’t work.</li>
-<li>Some local environments provide built-in networking, making CNIs seem optional..</li>
-<li>Always verify a CNI is installed to ensure Kubernetes networking works as expected.</li>
+<li><strong>Kube-Proxy is NOT mandatory</strong>—Kubernetes networking can function without it.</li>
+<li><strong>eBPF-based CNIs (Cilium, Calico eBPF, etc.) can fully replace Kube-Proxy</strong>, offering better performance and scalability.</li>
+<li><strong>Choosing the right networking approach is crucial</strong>—understanding Kubernetes networking beyond Kube-Proxy helps optimize cluster efficiency, security, and observability.</li>
 </ul>
 
 
